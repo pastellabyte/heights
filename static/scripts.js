@@ -31,10 +31,22 @@ function updateList() {
     names.forEach((name, index) => {
         if (index !== 0) { // Skip the 6ft person reference
             list.innerHTML += `<li class="list-group-item">${name}: ${heights[index].toFixed(2)} ft 
+                        <button onclick="clonePerson(${index}, 0.5)" class="btn btn-secondary">Reduce</button>
+                        <button onclick="clonePerson(${index}, 2)" class="btn btn-secondary">Enlarge</button>
                         <button onclick="removePerson(${index})" class="btn btn-danger">Remove</button>
                     </li>`;
         }
     });
+}
+
+
+
+function clonePerson(index, mod){
+        names.push(names[index]);
+        heights.push(heights[index]*mod);
+        colors.push(colors[index]);
+        updateList();
+        updateCanvas();
 }
 
 function removePerson(index) {
