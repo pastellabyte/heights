@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: block;
+    margin: 0;
+    margin-top: 10px;
+    overflow-x: hidden; /* Hide scrollbars */
+    background-color: #e9b1e6;
+}
+#visualCanvas {
+    width: 800px;
+    height: 400px;
+    border: 1px solid black;
+    margin: 20px auto;
+    position: relative;
+    border-radius: 10px;
+    background-color: #f5effc;
+}
+#list {
+    margin: auto;
+    margin-top: 10px;
+    width: 60%;
+}
+.person {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    text-align: center;
+    font-size: small;
+    outline: 2px rgb(0, 0, 0);
+    padding: 2px;
+    border-radius: 15px;
+}
